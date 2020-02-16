@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/formvalidation.js"></script>
+    <title>Event Form</title>
+</head>
+<body>
+    <div id="textinput">
+        <label for="eType"><b>Event type: </b></label>
+        <select id="Events" required onchange="dateValidate()" required>
+                <option value="default"> </option>
+                <option value="wedding">Wedding</option>
+                <option value="birthday">Birthday</option>
+                <option value="reunion">Reunion</option>
+                
+          </select>
+          <br><br> 
+
+          <label for="Event Title"><b>Event Title: </b></label>
+          <input type="text" name="Event Title" id="title" required> 
+          <br><br> 
+
+          <label for="Date from"><b>Event Dates: </b></label>
+          <input type="date" name="eDate1" id="eventDate1" required>  to 
+          <input type="date" name="eDate2" id="eventDate2" required>
+          <br><br>
+
+          <label for="Postdates"><b>Posting Dates: </b></label>
+          <input type="text" name="pDate" id="postDate" required>
+    </div>
+    <br><br><br>
+    <div id="checkboxes">
+        <fieldset>      
+            <input type="checkbox" name="check" value="1">Is registration required?<br>      
+            <input type="checkbox" name="check" value="2">Is this event associated with any Family Programs?<br>      
+            <input type="checkbox" name="check" value="3">Upon Registration Completion, Are Users to Receive an Auto Generated Email?<br>
+            <input type="checkbox" name="check" value="4">Is There a Point of Contact?<br>  
+            <input type="checkbox" name="check" value="5">Is There a Hosting Command Point of Contact?<br>  
+            <br>      
+        </fieldset> 
+    </div>
+    <br><br>
+    <div id="buttons">
+        <input type="submit" value="Save" onclick="dateValidate()">
+        <input type="button" value="Cancel">
+    </div>
+    
+</body>
+</html>
